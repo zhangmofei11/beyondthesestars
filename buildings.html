@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildings Guide - Beyond These Stars Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cosmic: {
+                            900: '#0a0e1a',
+                            800: '#0d1325',
+                            700: '#111933',
+                            600: '#162040',
+                            500: '#1c2a52',
+                        },
+                        starlight: {
+                            100: '#e8eaf6',
+                            200: '#c5cbe0',
+                            300: '#9fa8d0',
+                        },
+                        nebula: {
+                            purple: '#6b4c9a',
+                            blue: '#3d5a80',
+                            pink: '#9b59b6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google tag (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .star { animation: twinkle 3s infinite; }
+        body {
+            background: linear-gradient(180deg, #0a0e1a 0%, #111933 50%, #0d1325 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-starlight-100 font-sans">
+    <!-- Star Background -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute inset-0" id="stars"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-10 bg-cosmic-900/80 backdrop-blur-md border-b border-cosmic-600">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-starlight-100 to-nebula-blue bg-clip-text text-transparent">
+                    Beyond These Stars
+                </a>
+                <div class="flex gap-6">
+                    <a href="index.html" class="hover:text-nebula-blue transition-colors">Home</a>
+                    <a href="walkthrough.html" class="hover:text-nebula-blue transition-colors">Walkthrough</a>
+                    <a href="tips.html" class="hover:text-nebula-blue transition-colors">Tips</a>
+                    <a href="buildings.html" class="text-starlight-300 transition-colors font-semibold">Buildings</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="relative z-10 py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-starlight-100 to-starlight-300 bg-clip-text text-transparent">
+                Buildings Guide
+            </h1>
+            <p class="text-starlight-200 text-lg">Complete reference for all structures in Beyond These Stars.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="relative z-10 py-8 px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- Category Navigation -->
+            <div class="flex flex-wrap gap-2 mb-8">
+                <a href="#residential" class="px-3 py-1 bg-cosmic-700 hover:bg-cosmic-600 rounded-full text-sm transition-colors">Residential</a>
+                <a href="#production" class="px-3 py-1 bg-cosmic-700 hover:bg-cosmic-600 rounded-full text-sm transition-colors">Production</a>
+                <a href="#infrastructure" class="px-3 py-1 bg-cosmic-700 hover:bg-cosmic-600 rounded-full text-sm transition-colors">Infrastructure</a>
+                <a href="#ecology" class="px-3 py-1 bg-cosmic-700 hover:bg-cosmic-600 rounded-full text-sm transition-colors">Ecology</a>
+                <a href="#research" class="px-3 py-1 bg-cosmic-700 hover:bg-cosmic-600 rounded-full text-sm transition-colors">Research</a>
+                <a href="#trade" class="px-3 py-1 bg-cosmic-700 hover:bg-cosmic-600 rounded-full text-sm transition-colors">Trade</a>
+            </div>
+
+            <!-- Residential Section -->
+            <section class="mb-12" id="residential">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Residential Buildings
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Habitat Dome</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Basic housing unit for colonists. Provides living space and basic life support.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Capacity</td>
+                                            <td class="py-1 text-right text-starlight-300">10 Colonists</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-5 Energy/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Food</td>
+                                            <td class="py-1 text-right text-starlight-300">-2 Food/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">50 Minerals</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Build these near production facilities to reduce transport time. Upgrade to Advanced Habitats for better efficiency.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Advanced Habitat</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Upgraded living quarters with improved life support and comfort systems.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Capacity</td>
+                                            <td class="py-1 text-right text-starlight-300">25 Colonists</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-12 Energy/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Food</td>
+                                            <td class="py-1 text-right text-starlight-300">-4 Food/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">150 Minerals, 20 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">More cost-effective than multiple basic habitats. Unlocks higher population caps for your colony.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Colonist Hub</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Large residential complex with amenities and recreation facilities.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Capacity</td>
+                                            <td class="py-1 text-right text-starlight-300">100 Colonists</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-40 Energy/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Food</td>
+                                            <td class="py-1 text-right text-starlight-300">-15 Food/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">500 Minerals, 50 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Late-game building. Provides happiness bonus to nearby buildings. Essential for large colonies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Production Section -->
+            <section class="mb-12" id="production">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Production Buildings
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Minerals Extractor</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Extracts mineral resources from Kewa's surface deposits.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Output</td>
+                                            <td class="py-1 text-right text-green-400">+10 Minerals/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-8 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">30 Minerals</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Place near mineral deposits for bonus efficiency. Multiple extractors can share a deposit but with reduced output each.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Hydroponic Farm</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Grows food using hydroponic systems in controlled environments.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Output</td>
+                                            <td class="py-1 text-right text-green-400">+15 Food/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-6 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">40 Minerals, 5 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Requires water source or import. Build near residential areas to minimize food transport. Boost efficiency with Research upgrades.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Refinery</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Processes raw minerals into refined materials for construction.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Input</td>
+                                            <td class="py-1 text-right text-red-400">-20 Minerals/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Output</td>
+                                            <td class="py-1 text-right text-green-400">+12 Refined Materials/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-10 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">80 Minerals</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Chain after extractors for efficient processing. Refined materials are required for advanced buildings.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Energy Cell Factory</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Manufactures energy cells for advanced buildings and research.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Input</td>
+                                            <td class="py-1 text-right text-red-400">-5 Minerals, -3 Power/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Output</td>
+                                            <td class="py-1 text-right text-green-400">+4 Energy Cells/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">100 Minerals, 20 Refined Materials</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Critical for mid-game expansion. Energy cells are used in nearly all advanced buildings. Build multiple for large colonies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Infrastructure Section -->
+            <section class="mb-12" id="infrastructure">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Infrastructure Buildings
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Solar Array</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Basic power generation using solar panels. Reliable but limited output.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Output</td>
+                                            <td class="py-1 text-right text-green-400">+20 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">25 Minerals</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Your first power building. Build multiple for adequate power. Upgrade to Fusion Reactor for higher output.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Fusion Reactor</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Advanced power generation with high output but requires fuel.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Output</td>
+                                            <td class="py-1 text-right text-green-400">+100 Energy/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Fuel</td>
+                                            <td class="py-1 text-right text-red-400">-2 Energy Cells/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">200 Minerals, 50 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Most efficient mid-game power solution. Requires Energy Cells as fuel. Build near industrial zones.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cosmic-600">
+                        <div class="bg-cosmic-700/50 px-6 py-4 border-b border-cosmic-600">
+                            <h3 class="text-xl font-semibold text-starlight-100">Warehouse</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Storage facility that increases resource storage capacity.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Storage</td>
+                                            <td class="py-1 text-right text-green-400">+500 All Resources</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">60 Minerals</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-blue mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Build before increasing production. Specialized warehouses exist for specific resources with higher capacity.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ecology Section -->
+            <section class="mb-12" id="ecology">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Ecology Buildings
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-green-500/30">
+                        <div class="bg-green-500/10 px-6 py-4 border-b border-green-500/30">
+                            <h3 class="text-xl font-semibold text-green-400">Ecodome</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Restores and maintains local ecosystem health. Essential for Kewa's wellbeing.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Ecology</td>
+                                            <td class="py-1 text-right text-green-400">+5 Health/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-4 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">50 Minerals, 10 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-green-400 mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Build in damaged areas or near extraction zones. Multiple Ecodomes stack healing. Place strategically before expanding.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-green-500/30">
+                        <div class="bg-green-500/10 px-6 py-4 border-b border-green-500/30">
+                            <h3 class="text-xl font-semibold text-green-400">Biodome</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Creates a complete self-sustaining ecosystem with biodiversity bonus.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Ecology</td>
+                                            <td class="py-1 text-right text-green-400">+15 Health/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Bonus</td>
+                                            <td class="py-1 text-right text-green-400">+10% Resource Quality nearby</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-8 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-300">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">150 Minerals, 30 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-green-400 mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">High-impact building. Place near production zones for quality bonuses. Essential for late-game optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Section -->
+            <section class="mb-12" id="research">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Research Buildings
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-nebula-purple/30">
+                        <div class="bg-nebula-purple/10 px-6 py-4 border-b border-nebula-purple/30">
+                            <h3 class="text-xl font-semibold text-nebula-purple">Research Lab</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Conducts scientific research to unlock new technologies and upgrades.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Research</td>
+                                            <td class="py-1 text-right text-nebula-purple">+5 Research Points/cycle</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-10 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">100 Minerals, 20 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-purple mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Always have at least one running. Upgrade to Research Complex for faster research. Prioritize efficiency techs first.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-nebula-purple/30">
+                        <div class="bg-nebula-purple/10 px-6 py-4 border-b border-nebula-purple/30">
+                            <h3 class="text-xl font-semibold text-nebula-purple">Observatory</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Scans the cosmos for secrets, anomalies, and distant alien civilizations.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Discovery</td>
+                                            <td class="py-1 text-right text-nebula-purple">Unlocks Secrets</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-15 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">200 Minerals, 40 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-purple mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Required for discovering universe secrets. Build in isolated areas away from other structures for better scanning.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trade Section -->
+            <section class="mb-12" id="trade">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Trade Buildings
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-nebula-pink/30">
+                        <div class="bg-nebula-pink/10 px-6 py-4 border-b border-nebula-pink/30">
+                            <h3 class="text-xl font-semibold text-nebula-pink">Trade Hub</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Enables trade routes with alien civilizations. Required for interstellar commerce.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Trade Slots</td>
+                                            <td class="py-1 text-right text-starlight-300">3 Active Routes</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-12 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">150 Minerals, 30 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-pink mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Build early to start alien relations. Upgrade to Galactic Exchange for more routes and better prices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-nebula-pink/30">
+                        <div class="bg-nebula-pink/10 px-6 py-4 border-b border-nebula-pink/30">
+                            <h3 class="text-xl font-semibold text-nebula-pink">Galactic Exchange</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-starlight-300 text-sm mb-3">Advanced trading facility with better routes and exclusive alien technologies.</p>
+                                    <table class="w-full text-sm">
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Trade Slots</td>
+                                            <td class="py-1 text-right text-starlight-300">8 Active Routes</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Bonus</td>
+                                            <td class="py-1 text-right text-green-400">+25% Trade Value</td>
+                                        </tr>
+                                        <tr class="border-b border-cosmic-700/50">
+                                            <td class="py-1 text-starlight-200">Power</td>
+                                            <td class="py-1 text-right text-starlight-300">-25 Energy/cycle</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-1 text-starlight-200">Cost</td>
+                                            <td class="py-1 text-right text-starlight-300">400 Minerals, 100 Energy Cells</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bg-cosmic-900/50 rounded-lg p-4">
+                                    <h4 class="text-sm font-semibold text-nebula-pink mb-2">Tips</h4>
+                                    <p class="text-xs text-starlight-300">Late-game building for maximizing trade profits. Can unlock exotic technologies unavailable elsewhere.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="flex justify-between items-center pt-8 border-t border-cosmic-600">
+                <a href="tips.html" class="px-4 py-2 bg-cosmic-700 hover:bg-cosmic-600 rounded-lg transition-colors">
+                    ← Strategy Tips
+                </a>
+                <a href="index.html" class="px-4 py-2 bg-cosmic-700 hover:bg-cosmic-600 rounded-lg transition-colors">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-cosmic-900 border-t border-cosmic-700 py-8 px-4 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-starlight-300 text-sm mb-2">Beyond These Stars Wiki</p>
+            <p class="text-starlight-300/50 text-xs">This is a fan-made wiki. Game by Balancing Monkey Games.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Generate star background
+        const starsContainer = document.getElementById('stars');
+        const starCount = 100;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'absolute star rounded-full bg-white';
+            const size = Math.random() * 2 + 1;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>

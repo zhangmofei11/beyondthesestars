@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond These Stars - Game Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cosmic: {
+                            900: '#0a0e1a',
+                            800: '#0d1325',
+                            700: '#111933',
+                            600: '#162040',
+                            500: '#1c2a52',
+                        },
+                        starlight: {
+                            100: '#e8eaf6',
+                            200: '#c5cbe0',
+                            300: '#9fa8d0',
+                        },
+                        nebula: {
+                            purple: '#6b4c9a',
+                            blue: '#3d5a80',
+                            pink: '#9b59b6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google tag (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .star { animation: twinkle 3s infinite; }
+        .star:nth-child(2n) { animation-delay: 0.5s; }
+        .star:nth-child(3n) { animation-delay: 1s; }
+        .star:nth-child(5n) { animation-delay: 1.5s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .floating { animation: float 6s ease-in-out infinite; }
+        body {
+            background: linear-gradient(180deg, #0a0e1a 0%, #111933 50%, #0d1325 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-starlight-100 font-sans">
+    <!-- Star Background -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute inset-0" id="stars"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-10 bg-cosmic-900/80 backdrop-blur-md border-b border-cosmic-600">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-starlight-100 to-nebula-blue bg-clip-text text-transparent">
+                    Beyond These Stars
+                </a>
+                <div class="flex gap-6">
+                    <a href="index.html" class="hover:text-nebula-blue transition-colors">Home</a>
+                    <a href="walkthrough.html" class="hover:text-nebula-blue transition-colors">Walkthrough</a>
+                    <a href="tips.html" class="hover:text-nebula-blue transition-colors">Tips</a>
+                    <a href="buildings.html" class="hover:text-nebula-blue transition-colors">Buildings</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative z-10 py-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="floating mb-8">
+                <svg class="w-32 h-32 mx-auto text-nebula-purple opacity-80" viewBox="0 0 100 100" fill="currentColor">
+                    <ellipse cx="50" cy="50" rx="45" ry="25" opacity="0.3"/>
+                    <ellipse cx="50" cy="50" rx="35" ry="18" opacity="0.5"/>
+                    <ellipse cx="50" cy="50" rx="25" ry="12"/>
+                    <circle cx="30" cy="45" r="3" fill="#fff" opacity="0.8"/>
+                    <circle cx="65" cy="55" r="2" fill="#fff" opacity="0.6"/>
+                    <circle cx="45" cy="42" r="1.5" fill="#fff" opacity="0.7"/>
+                </svg>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-starlight-100 via-nebula-blue to-nebula-purple bg-clip-text text-transparent">
+                Beyond These Stars
+            </h1>
+            <p class="text-xl md:text-2xl text-starlight-200 max-w-3xl mx-auto mb-4">
+                Build Civilization on a Giant Space Whale
+            </p>
+            <p class="text-starlight-300 max-w-2xl mx-auto mb-8">
+                A sci-fi city builder and colony sim where you guide humanity's survival aboard the ancient space whale Kewa.
+                Manage resources, restore ecosystems, and explore the universe's deepest secrets.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-4 py-2 bg-cosmic-700 rounded-full text-sm border border-nebula-blue/30">Sci-Fi City Builder</span>
+                <span class="px-4 py-2 bg-cosmic-700 rounded-full text-sm border border-nebula-purple/30">Colony Simulation</span>
+                <span class="px-4 py-2 bg-cosmic-700 rounded-full text-sm border border-starlight-300/30">Resource Management</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Game Info Section -->
+    <section class="relative z-10 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-starlight-100">About the Game</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl p-6 border border-cosmic-600">
+                    <h3 class="text-xl font-semibold mb-4 text-nebula-blue">Developer</h3>
+                    <p class="text-starlight-200">Balancing Monkey Games</p>
+                </div>
+                <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl p-6 border border-cosmic-600">
+                    <h3 class="text-xl font-semibold mb-4 text-nebula-blue">Platform</h3>
+                    <p class="text-starlight-200">Steam</p>
+                </div>
+                <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl p-6 border border-cosmic-600">
+                    <h3 class="text-xl font-semibold mb-4 text-nebula-blue">Setting</h3>
+                    <p class="text-starlight-200">Giant Space Whale Kewa</p>
+                </div>
+                <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl p-6 border border-cosmic-600">
+                    <h3 class="text-xl font-semibold mb-4 text-nebula-blue">Genre</h3>
+                    <p class="text-starlight-200">Sci-Fi Colony Simulation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="relative z-10 py-16 px-4 bg-cosmic-900/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-starlight-100">Game Features</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-cosmic-700 to-cosmic-800 rounded-xl p-6 border border-nebula-purple/20">
+                    <div class="w-12 h-12 bg-nebula-purple/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-nebula-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Resource Management</h3>
+                    <p class="text-starlight-300 text-sm">Manage limited space and resources as you build civilization on Kewa's back.</p>
+                </div>
+                <div class="bg-gradient-to-br from-cosmic-700 to-cosmic-800 rounded-xl p-6 border border-nebula-blue/20">
+                    <div class="w-12 h-12 bg-nebula-blue/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-nebula-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Ecology Restoration</h3>
+                    <p class="text-starlight-300 text-sm">Restore and maintain Kewa's ecosystem for sustainable colony growth.</p>
+                </div>
+                <div class="bg-gradient-to-br from-cosmic-700 to-cosmic-800 rounded-xl p-6 border border-starlight-300/20">
+                    <div class="w-12 h-12 bg-starlight-300/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-starlight-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Supply Chains</h3>
+                    <p class="text-starlight-300 text-sm">Build complex supply chains to support your growing colony.</p>
+                </div>
+                <div class="bg-gradient-to-br from-cosmic-700 to-cosmic-800 rounded-xl p-6 border border-nebula-pink/20">
+                    <div class="w-12 h-12 bg-nebula-pink/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-nebula-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Alien Trade</h3>
+                    <p class="text-starlight-300 text-sm">Trade with alien species and build interstellar commerce routes.</p>
+                </div>
+                <div class="bg-gradient-to-br from-cosmic-700 to-cosmic-800 rounded-xl p-6 border border-nebula-purple/20">
+                    <div class="w-12 h-12 bg-nebula-purple/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-nebula-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Tech Tree</h3>
+                    <p class="text-starlight-300 text-sm">Research new technologies to expand your colony's capabilities.</p>
+                </div>
+                <div class="bg-gradient-to-br from-cosmic-700 to-cosmic-800 rounded-xl p-6 border border-nebula-blue/20">
+                    <div class="w-12 h-12 bg-nebula-blue/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-nebula-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Universe Secrets</h3>
+                    <p class="text-starlight-300 text-sm">Explore the mysteries of the universe and uncover hidden secrets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="relative z-10 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-starlight-100">Explore the Wiki</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="walkthrough.html" class="block bg-cosmic-800/50 hover:bg-cosmic-700/50 backdrop-blur-sm rounded-xl p-6 border border-cosmic-600 hover:border-nebula-blue transition-all group">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-nebula-blue transition-colors">Walkthrough</h3>
+                    <p class="text-starlight-300 text-sm">Beginner guide and walkthrough</p>
+                </a>
+                <a href="tips.html" class="block bg-cosmic-800/50 hover:bg-cosmic-700/50 backdrop-blur-sm rounded-xl p-6 border border-cosmic-600 hover:border-nebula-purple transition-all group">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-nebula-purple transition-colors">Strategy Tips</h3>
+                    <p class="text-starlight-300 text-sm">Resource management strategies</p>
+                </a>
+                <a href="buildings.html" class="block bg-cosmic-800/50 hover:bg-cosmic-700/50 backdrop-blur-sm rounded-xl p-6 border border-cosmic-600 hover:border-starlight-300 transition-all group">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-starlight-300 transition-colors">Buildings</h3>
+                    <p class="text-starlight-300 text-sm">Complete building guide</p>
+                </a>
+                <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl p-6 border border-cosmic-600 opacity-50 cursor-not-allowed">
+                    <h3 class="text-lg font-semibold mb-2 text-starlight-300">Coming Soon</h3>
+                    <p class="text-starlight-300 text-sm">More content incoming</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-cosmic-900 border-t border-cosmic-700 py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-starlight-300 text-sm mb-2">Beyond These Stars Wiki</p>
+            <p class="text-starlight-300/50 text-xs">This is a fan-made wiki. Game by Balancing Monkey Games.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Generate star background
+        const starsContainer = document.getElementById('stars');
+        const starCount = 150;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'absolute star rounded-full bg-white';
+            const size = Math.random() * 2 + 1;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>
