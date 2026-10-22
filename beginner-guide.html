@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond These Stars Beginner Guide - Your First Colony</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cosmic: {
+                            900: '#0a0e1a',
+                            800: '#0d1325',
+                            700: '#111933',
+                            600: '#162040',
+                            500: '#1c2a52',
+                        },
+                        starlight: {
+                            100: '#e8eaf6',
+                            200: '#c5cbe0',
+                            300: '#9fa8d0',
+                        },
+                        nebula: {
+                            purple: '#6b4c9a',
+                            blue: '#3d5a80',
+                            pink: '#9b59b6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google tag (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M88HSJ20X9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M88HSJ20X9');
+    </script>
+    <meta name="description" content="Start Beyond These Stars with this beginner guide: your first buildings, what to research first, how to read resource bars, and how to grow a colony on Kewa safely.">
+    <meta name="keywords" content="Beyond These Stars beginner guide, Beyond These Stars how to play, first colony build order, resource bars explained, first research, Kewa survival basics">
+    <style>
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .star { animation: twinkle 3s infinite; }
+        body {
+            background: linear-gradient(180deg, #0a0e1a 0%, #111933 50%, #0d1325 100%);
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://beyondthesestars.world/#website",
+          "name": "Beyond These Stars",
+          "url": "https://beyondthesestars.world/",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://beyondthesestars.world/beginner-guide.html#webpage",
+          "url": "https://beyondthesestars.world/beginner-guide.html",
+          "name": "Beyond These Stars Beginner Guide - Your First Colony",
+          "description": "Start Beyond These Stars with this beginner guide: your first buildings, what to research first, how to read resource bars, and how to grow a colony on Kewa safely.",
+          "isPartOf": {
+            "@id": "https://beyondthesestars.world/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://beyondthesestars.world/beginner-guide.html#breadcrumb"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://beyondthesestars.world/beginner-guide.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://beyondthesestars.world/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Beyond These Stars Beginner Guide - Your First Colony"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="min-h-screen text-starlight-100 font-sans">
+    <!-- Star Background -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute inset-0" id="stars"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-10 bg-cosmic-900/80 backdrop-blur-md border-b border-cosmic-600">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-starlight-100 to-nebula-blue bg-clip-text text-transparent">
+                    Beyond These Stars
+                </a>
+                <div class="flex gap-6">
+                    <a href="index.html" class="hover:text-nebula-blue transition-colors">Home</a>
+                    <a href="walkthrough.html" class="hover:text-nebula-blue transition-colors">Walkthrough</a>
+                    <a href="tips.html" class="hover:text-nebula-blue transition-colors">Tips</a>
+                    <a href="buildings.html" class="hover:text-nebula-blue transition-colors">Buildings</a>
+                    <a href="pro-tips.html" class="hover:text-nebula-blue transition-colors">Pro Tips</a>
+                    <a href="beginner-guide.html" class="text-nebula-purple transition-colors font-semibold">Beginner Guide</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="relative z-10 py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-starlight-100 to-nebula-purple bg-clip-text text-transparent">
+                Beyond These Stars Beginner Guide
+            </h1>
+            <p class="text-starlight-200 text-lg">How to build your first colony on the space whale Kewa, in the order that actually works.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="relative z-10 py-8 px-4">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Intro -->
+            <section class="mb-12">
+                <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl p-6 border border-cosmic-600 mb-8">
+                    <h2 class="text-xl font-semibold mb-4 text-nebula-blue">What You Are Actually Doing</h2>
+                    <p class="text-starlight-200 mb-4">
+                        You are not building a city from scratch on empty land. You are building on a
+                        living creature. Kewa the space whale is your entire map, its back is your
+                        surface, and its health determines how good your land produces. That one idea
+                        explains every system in the game: extraction, ecology, trade, and research all
+                        compete for the same whale.
+                    </p>
+                    <p class="text-starlight-200">
+                        A new colony fails when it treats Kewa like an infinite resource. Grow gently,
+                        repair as you go, and the whale will carry you a very long way.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Resource bars -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    How to Read Your Resource Bars
+                </h2>
+                <div class="space-y-4 text-starlight-200">
+                    <p>
+                        Every core resource has a production bar and a consumption bar. The number that
+                        matters is the ratio between them, and understanding this is most of the early
+                        game.
+                    </p>
+
+                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-blue/20">
+                        <h3 class="font-semibold text-nebula-blue mb-3">Ratio Bands</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="text-left text-starlight-200 border-b border-cosmic-600">
+                                        <th class="py-2 px-3">Ratio</th>
+                                        <th class="py-2 px-3">Meaning</th>
+                                        <th class="py-2 px-3">What to Do</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-starlight-300">
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">Above 1.5</td>
+                                        <td class="py-2 px-3">Large surplus</td>
+                                        <td class="py-2 px-3">Safe to expand one production line</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">1.1 to 1.5</td>
+                                        <td class="py-2 px-3">Healthy surplus</td>
+                                        <td class="py-2 px-3">The band you want to sit in</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">1.0 to 1.1</td>
+                                        <td class="py-2 px-3">Break-even</td>
+                                        <td class="py-2 px-3">Stop expanding and build storage</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-3">Below 1.0</td>
+                                        <td class="py-2 px-3">Deficit</td>
+                                        <td class="py-2 px-3">Fix this before anything else</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
+                        <h3 class="font-semibold text-starlight-100 mb-2">The Four Core Resources</h3>
+                        <ul class="space-y-2 text-starlight-300">
+                            <li><strong class="text-starlight-100">Power</strong> feeds everything. A blackout stops farms, labs and extractors at once.</li>
+                            <li><strong class="text-starlight-100">Oxygen</strong> caps your population. Low air quality gets colonists into trouble before food runs out.</li>
+                            <li><strong class="text-starlight-100">Biomass</strong> is the feedstock that nutrient processes turn into food.</li>
+                            <li><strong class="text-starlight-100">Nutrients</strong> feed the hydroponic farms. Starved farms underproduce food.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- First buildings -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Your First Five Buildings
+                </h2>
+                <div class="space-y-4 text-starlight-200">
+                    <p>
+                        Do not improvise your opening. Placement order matters more than placement
+                        speed, and this sequence keeps the colony solvent from cycle one.
+                    </p>
+
+                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-blue/20">
+                        <h3 class="font-semibold text-nebula-blue mb-3">Opening Build Order</h3>
+                        <ol class="list-decimal list-inside space-y-1 ml-4">
+                            <li><strong class="text-starlight-100">Solar Array</strong> for steady power. Everything you build next depends on it.</li>
+                            <li><strong class="text-starlight-100">Habitat Dome</strong> so your starting colonists have somewhere to sleep.</li>
+                            <li><strong class="text-starlight-100">Minerals Extractor</strong> for the construction material your next buildings need.</li>
+                            <li><strong class="text-starlight-100">Hydroponic Farm</strong> so food is a buffer rather than a daily emergency.</li>
+                            <li><strong class="text-starlight-100">Warehouse</strong> so the surplus you are about to produce is not wasted.</li>
+                        </ol>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-cosmic-800/50 rounded-lg p-5 border border-cosmic-600">
+                            <h3 class="font-semibold text-starlight-100 mb-2">Wait for the Research Lab</h3>
+                            <p class="text-starlight-300 text-sm">
+                                The sixth building is a Research Lab, and you should only place it once
+                                every resource bar sits above 1.0. A lab running on an empty mineral
+                                supply stalls research and wastes the building.
+                            </p>
+                        </div>
+                        <div class="bg-cosmic-800/50 rounded-lg p-5 border border-cosmic-600">
+                            <h3 class="font-semibold text-starlight-100 mb-2">Skip the Comforts</h3>
+                            <p class="text-starlight-300 text-sm">
+                                Inns, bathhouses and statues all look appealing and all draw power and
+                                materials you do not have yet. Build them once your ratios are stable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- First research -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Your First Research
+                </h2>
+                <div class="space-y-4 text-starlight-200">
+                    <p>
+                        When you finally unlock the Research Lab, the order you queue technology in
+                        determines how quickly the rest of the game opens up. Efficiency research pays
+                        for itself immediately because it shrinks every bill that follows.
+                    </p>
+
+                    <div class="bg-gradient-to-r from-nebula-pink/20 to-cosmic-700/50 rounded-xl p-6 border border-nebula-pink/30">
+                        <h3 class="text-lg font-semibold mb-4 text-nebula-pink">First Research Queue</h3>
+                        <ul class="space-y-2 text-starlight-300">
+                            <li><strong class="text-starlight-100">1. Resource Efficiency</strong> cuts extraction and processing costs across the board.</li>
+                            <li><strong class="text-starlight-100">2. Supply Chain Optimisation</strong> raises output without adding new buildings.</li>
+                            <li><strong class="text-starlight-100">3. Basic Ecology</strong> slows ecological decay before you open heavy extraction zones.</li>
+                            <li><strong class="text-starlight-100">4. Advanced Power</strong> unlocks reactors for when your colony outgrows solar.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
+                        <h3 class="font-semibold text-starlight-100 mb-2">Build the Energy Cell Factory</h3>
+                        <p class="text-sm text-starlight-300">
+                            Almost every advanced building and lab upgrade costs energy cells, and they
+                            are the resource most likely to run out mid-project. One Energy Cell Factory
+                            early prevents a long stall later.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- First colonies -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Growing Your Population
+                </h2>
+                <div class="space-y-4 text-starlight-200">
+                    <p>
+                        Population growth is gated by housing, oxygen and morale together, so it stalls
+                        for three different reasons at once. Here is the order to fix them.
+                    </p>
+
+                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-purple/20">
+                        <h3 class="font-semibold text-nebula-purple mb-3">Growth Checklist</h3>
+                        <ul class="space-y-2 text-starlight-300">
+                            <li><strong class="text-starlight-100">Beds before people.</strong> Build or upgrade housing ahead of the population you expect.</li>
+                            <li><strong class="text-starlight-100">Oxygen next.</strong> Air quality caps how many colonists a district can support.</li>
+                            <li><strong class="text-starlight-100">Food at 1.3 times consumption.</strong> Starving colonists lose morale and leave.</li>
+                            <li><strong class="text-starlight-100">Morale is a resource.</strong> Keep food and oxygen healthy and add comfort buildings once you can afford them.</li>
+                            <li><strong class="text-starlight-100">Upgrades beat stacking.</strong> An Advanced Habitat holds more than a second dome and frees land.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mistakes -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Beginner Mistakes to Avoid
+                </h2>
+                <div class="bg-cosmic-800/50 rounded-lg p-6 border border-nebula-pink/20">
+                    <ul class="space-y-3 text-starlight-300">
+                        <li><strong class="text-starlight-100">Expanding before stabilising:</strong> adding buildings to a colony with a deficit simply scales the deficit.</li>
+                        <li><strong class="text-starlight-100">Strip-mining Kewa:</strong> a colony on a dying whale inherits the collapse. If yields drop on old ground, you are extracting too hard.</li>
+                        <li><strong class="text-starlight-100">Ignoring oxygen:</strong> crews fail before food runs out when air quality slips.</li>
+                        <li><strong class="text-starlight-100">Building storage last:</strong> production above storage capacity wastes every overproduced cycle.</li>
+                        <li><strong class="text-starlight-100">One-route dependency:</strong> a single power plant or a single trade partner is a single point of failure.</li>
+                        <li><strong class="text-starlight-100">Over-researching luxury:</strong> comfort tech before efficiency tech is a slow spiral you will feel for hours.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Next steps -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Where to Go Next
+                </h2>
+                <div class="bg-cosmic-700/50 rounded-lg p-6 border border-nebula-blue/20">
+                    <ul class="space-y-3 text-starlight-300">
+                        <li><strong class="text-starlight-100">Walkthrough:</strong> the five-phase progression from first settlement through the endgame, with milestone goals for each phase.</li>
+                        <li><strong class="text-starlight-100">Strategy Tips:</strong> resource priority order, early build order, ecology management and trade negotiation.</li>
+                        <li><strong class="text-starlight-100">Buildings:</strong> what every structure does, its requirements, and where it works best on Kewa's back.</li>
+                        <li><strong class="text-starlight-100">Pro Tips:</strong> buffer sizing, power redundancy, ecology routing and research acceleration for large colonies.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="flex justify-between items-center pt-8 border-t border-cosmic-600">
+                <a href="index.html" class="px-4 py-2 bg-cosmic-700 hover:bg-cosmic-600 rounded-lg transition-colors">
+                    ← Back to Home
+                </a>
+                <a href="walkthrough.html" class="px-4 py-2 bg-nebula-purple/20 hover:bg-nebula-purple/30 text-nebula-purple rounded-lg transition-colors">
+                    Next: Walkthrough →
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Adsterra Ads -->
+    <script async="async" data-cfasync="false" src="https://bauval.org/21/4b4681af68a0d121311187dab61e6022"></script>
+    <div id="container-4b4681af68a0d121311187dab61e6022"></div>
+
+    <script data-cfasync="false" src="https://bauval.org/14/2277d65cec80439a2cb28f1bbdb7256b"></script>
+
+    <script>
+      atOptions = {
+        'key' : '8e1afacee0bd34a44dbf66aa1e067405',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://bauval.org/22/8e1afacee0bd34a44dbf66aa1e067405"></script>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-cosmic-900 border-t border-cosmic-700 py-8 px-4 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-starlight-300 text-sm mb-2">Beyond These Stars Wiki</p>
+            <p class="text-starlight-300/50 text-xs">This is a fan-made wiki. Game by Balancing Monkey Games.</p>
+        </div>
+
+    <!-- Related Articles -->
+    <section class="max-w-6xl mx-auto py-8 px-4 border-t border-cosmic-700">
+        <h3 class="text-2xl font-bold mb-4 text-nebula-blue">You Might Also Like</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+        <a href="pro-tips.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Pro Tips - Beyond These Stars Wiki</span>
+        </a>
+        <a href="index.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Beyond These Stars - Game Wiki</span>
+        </a>
+        <a href="tips.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Strategy Tips - Beyond These Stars Wiki</span>
+        </a>
+        <a href="buildings.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Buildings Guide - Beyond These Stars Wiki</span>
+        </a>
+        </div>
+    </section>
+</footer>
+
+    <script>
+        // Generate star background
+        const starsContainer = document.getElementById('stars');
+        const starCount = 100;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'absolute star rounded-full bg-white';
+            const size = Math.random() * 2 + 1;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>

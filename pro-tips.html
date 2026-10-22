@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond These Stars Pro Tips - Advanced Colony Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cosmic: {
+                            900: '#0a0e1a',
+                            800: '#0d1325',
+                            700: '#111933',
+                            600: '#162040',
+                            500: '#1c2a52',
+                        },
+                        starlight: {
+                            100: '#e8eaf6',
+                            200: '#c5cbe0',
+                            300: '#9fa8d0',
+                        },
+                        nebula: {
+                            purple: '#6b4c9a',
+                            blue: '#3d5a80',
+                            pink: '#9b59b6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google tag (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M88HSJ20X9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M88HSJ20X9');
+    </script>
+    <meta name="description" content="Advanced Beyond These Stars tactics: buffer sizing, power redundancy, ecology repair routing, alien trade leverage, research acceleration, and crisis drills.">
+    <meta name="keywords" content="Beyond These Stars pro tips, Beyond These Stars advanced strategy, colony buffer management, ecology repair, alien trade leverage, research acceleration, crisis drills">
+    <style>
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .star { animation: twinkle 3s infinite; }
+        body {
+            background: linear-gradient(180deg, #0a0e1a 0%, #111933 50%, #0d1325 100%);
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://beyondthesestars.world/#website",
+          "name": "Beyond These Stars",
+          "url": "https://beyondthesestars.world/",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://beyondthesestars.world/pro-tips.html#webpage",
+          "url": "https://beyondthesestars.world/pro-tips.html",
+          "name": "Beyond These Stars Pro Tips - Advanced Colony Strategy",
+          "description": "Advanced Beyond These Stars tactics: buffer sizing, power redundancy, ecology repair routing, alien trade leverage, research acceleration, and crisis drills.",
+          "isPartOf": {
+            "@id": "https://beyondthesestars.world/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://beyondthesestars.world/pro-tips.html#breadcrumb"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://beyondthesestars.world/pro-tips.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://beyondthesestars.world/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Beyond These Stars Pro Tips - Advanced Colony Strategy"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="min-h-screen text-starlight-100 font-sans">
+    <!-- Star Background -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute inset-0" id="stars"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-10 bg-cosmic-900/80 backdrop-blur-md border-b border-cosmic-600">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-starlight-100 to-nebula-blue bg-clip-text text-transparent">
+                    Beyond These Stars
+                </a>
+                <div class="flex gap-6">
+                    <a href="index.html" class="hover:text-nebula-blue transition-colors">Home</a>
+                    <a href="walkthrough.html" class="hover:text-nebula-blue transition-colors">Walkthrough</a>
+                    <a href="tips.html" class="hover:text-nebula-blue transition-colors">Tips</a>
+                    <a href="buildings.html" class="hover:text-nebula-blue transition-colors">Buildings</a>
+                    <a href="pro-tips.html" class="text-nebula-purple transition-colors font-semibold">Pro Tips</a>
+                    <a href="beginner-guide.html" class="hover:text-nebula-blue transition-colors">Beginner Guide</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="relative z-10 py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-starlight-100 to-nebula-pink bg-clip-text text-transparent">
+                Beyond These Stars Pro Tips
+            </h1>
+            <p class="text-starlight-200 text-lg">The systems-level tactics that keep a large colony solvent through crises, expansions, and late-game research pushes.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="relative z-10 py-8 px-4">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Buffer -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Buffer Sizing and Reserve Rules
+                </h2>
+                <div class="space-y-4">
+                    <p class="text-starlight-200">
+                        Most colony failures in Beyond These Stars are not production failures. They are
+                        buffer failures. A colony that produces exactly what it consumes has no slack,
+                        and a colony with no slack cannot survive a single bad cycle. Think in reserve
+                        depth rather than production height.
+                    </p>
+
+                    <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl p-6 border border-nebula-blue/20">
+                        <h3 class="text-xl font-semibold mb-3 text-nebula-blue">Target Buffer by Phase</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="text-left text-starlight-200 border-b border-cosmic-600">
+                                        <th class="py-2 px-3">Phase</th>
+                                        <th class="py-2 px-3">Food Buffer</th>
+                                        <th class="py-2 px-3">Power Buffer</th>
+                                        <th class="py-2 px-3">Storage Priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-starlight-300">
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">Early settlement</td>
+                                        <td class="py-2 px-3">1 cycle</td>
+                                        <td class="py-2 px-3">1 cycle</td>
+                                        <td class="py-2 px-3">Food, then minerals</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">First technology</td>
+                                        <td class="py-2 px-3">2 cycles</td>
+                                        <td class="py-2 px-3">2 cycles</td>
+                                        <td class="py-2 px-3">Energy cells, then food</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">Ecology work</td>
+                                        <td class="py-2 px-3">2 cycles</td>
+                                        <td class="py-2 px-3">3 cycles</td>
+                                        <td class="py-2 px-3">Keep space for Ecodome materials</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-3">Trade and endgame</td>
+                                        <td class="py-2 px-3">3 cycles</td>
+                                        <td class="py-2 px-3">3 cycles</td>
+                                        <td class="py-2 px-3">Trade goods, then research stock</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-purple/20">
+                        <h3 class="font-semibold text-nebula-purple mb-3">The Storage Ceiling Rule</h3>
+                        <ul class="space-y-2 text-starlight-300">
+                            <li><strong class="text-starlight-100">Never expand production past storage twice.</strong> A warehouse tier only pays for itself if you fill it within two cycles of building it.</li>
+                            <li><strong class="text-starlight-100">Split storage by resource.</strong> A single shared stockpile hides shortages and lets overflow mask a deficit.</li>
+                            <li><strong class="text-starlight-100">Set a hard cap before you build.</strong> Decide the target buffer, then size the warehouse to hold it plus one cycle of production.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Power redundancy -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Power Redundancy and Blackout Defence
+                </h2>
+                <div class="space-y-4 text-starlight-200">
+                    <p>
+                        A blackout is the fastest way to lose a colony, because every production building
+                        in the game depends on power. The fix is not a bigger single generator. It is
+                        making sure a single failure cannot take the whole grid offline.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-cosmic-800/50 rounded-xl p-5 border border-nebula-blue/20">
+                            <h3 class="font-semibold text-nebula-blue mb-2">Split Across Sources</h3>
+                            <p class="text-starlight-300 text-sm">
+                                Keep two independent power sources running at all times, ideally a Solar
+                                Array and a Fusion Reactor. If one fails, the other carries the colony
+                                through the gap without a blackout.
+                            </p>
+                        </div>
+                        <div class="bg-cosmic-800/50 rounded-xl p-5 border border-nebula-blue/20">
+                            <h3 class="font-semibold text-nebula-blue mb-2">Reserve the Headroom</h3>
+                            <p class="text-starlight-300 text-sm">
+                                Do not run power at exactly 1.0 ratio. Aim for 1.2 and keep the surplus
+                                as an emergency reserve so a single damaged building does not trigger
+                                a cascading failure.
+                            </p>
+                        </div>
+                        <div class="bg-cosmic-800/50 rounded-xl p-5 border border-nebula-blue/20">
+                            <h3 class="font-semibold text-nebula-blue mb-2">Blackout Drill</h3>
+                            <p class="text-starlight-300 text-sm">
+                                Once a month, deliberately kill one power source and confirm the colony
+                                survives. If it does not, you do not have redundancy, you have luck.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ecology routing -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Ecology Repair Routing
+                </h2>
+                <div class="space-y-4 text-starlight-200">
+                    <p>
+                        Kewa's health is a compounding stat. A colony that repairs the whale earns
+                        better resource quality from every tile it develops, and that bonus applies to
+                        tiles you have already built on.
+                    </p>
+
+                    <div class="bg-gradient-to-r from-nebula-pink/20 to-cosmic-700/50 rounded-xl p-6 border border-nebula-pink/30">
+                        <h3 class="text-lg font-semibold mb-4 text-nebula-pink">The Ecodome Placement Ladder</h3>
+                        <ol class="list-decimal list-inside space-y-2 text-starlight-300">
+                            <li><strong class="text-starlight-100">Worst brown patches first.</strong> Heavily degraded regions take the longest to recover, so start them early.</li>
+                            <li><strong class="text-starlight-100">Stack, do not spread.</strong> Multiple Ecodomes in one region restore it far faster than one Ecodome per region.</li>
+                            <li><strong class="text-starlight-100">Follow the extraction sites.</strong> Put repair coverage where you are harvesting, because damaged ground yields less per tile.</li>
+                            <li><strong class="text-starlight-100">Protect the reserve.</strong> Keep roughly a quarter of the surface undeveloped so there is always regenerating ground.</li>
+                            <li><strong class="text-starlight-100">Pair with a Biodome.</strong> A Biodome next to a production cluster adds resource quality across the whole area.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
+                        <h3 class="font-semibold text-starlight-100 mb-2">Reading Kewa's Health</h3>
+                        <p class="text-starlight-300 text-sm">
+                            A healthy whale shows green patches and a health meter above 80%. Trouble
+                            shows as brown patches spreading outward and yields dropping on tiles you
+                            already harvested. If yields fall on old ground, stop extracting there and
+                            send repair crews.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trade leverage -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Trade Leverage and Alien Negotiation
+                </h2>
+                <div class="space-y-4 text-starlight-200">
+                    <p>
+                        Trade is how you break a resource ceiling without over-extracting Kewa. Know
+                        which of your resources is genuinely surplus and which is only temporarily ahead.
+                    </p>
+
+                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-blue/20">
+                        <h3 class="font-semibold text-nebula-blue mb-3">Negotiation Discipline</h3>
+                        <ul class="space-y-2 text-starlight-300">
+                            <li><strong class="text-starlight-100">Trade the surplus, not the buffer.</strong> If you are two cycles into your reserve, that resource is not for sale.</li>
+                            <li><strong class="text-starlight-100">Deal in what they want.</strong> Vorthan want minerals and tech data, Zephyrians want food and organics, Crystalline want energy and data.</li>
+                            <li><strong class="text-starlight-100">Spread your partners.</strong> Three routes with different species is safer than one route with a generous one.</li>
+                            <li><strong class="text-starlight-100">Improve relations before you need them.</strong> Hostile aliens can raid, and a raid is far more expensive than any bad trade price.</li>
+                            <li><strong class="text-starlight-100">Expect broken routes.</strong> Cosmic events interrupt trade, so keep two cycles of reserves.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
+                        <h3 class="font-semibold text-starlight-100 mb-2">When to Buy, When to Build</h3>
+                        <p class="text-sm text-starlight-300">
+                            If a resource can be bought reliably from an alien with a stable route,
+                            buy it and spend your build slots on extraction of something they cannot
+                            supply. If no route is stable, you need your own production and the trade
+                            option is a bonus, not a plan.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research acceleration -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Research Acceleration
+                </h2>
+                <div class="space-y-4 text-starlight-200">
+                    <p>
+                        Research is the only system in the game that scales without costing you land.
+                        Two labs researching the same tier is efficient; two labs researching different
+                        tiers is a mistake.
+                    </p>
+
+                    <div class="bg-cosmic-800/50 rounded-lg p-4 border border-starlight-300/20">
+                        <h3 class="font-semibold text-starlight-100 mb-3">Lab Rules</h3>
+                        <ul class="space-y-2 text-starlight-300">
+                            <li><strong class="text-starlight-100">One tier per lab.</strong> Split labs only across two adjacent tiers, never across distant branches.</li>
+                            <li><strong class="text-starlight-100">Energy cells first.</strong> If a lab idles, the bottleneck is energy cells, not research points. Build the factory before the second lab.</li>
+                            <li><strong class="text-starlight-100">Queue ahead.</strong> Never let a lab finish with nothing queued. Empty research time is wasted capacity.</li>
+                            <li><strong class="text-starlight-100">Efficiency before expansion.</strong> Resource Efficiency and Supply Chain Optimisation reduce every later bill, including the cost of the building you want.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-purple/20">
+                        <h3 class="font-semibold text-nebula-purple mb-2">Ecology Research Timing</h3>
+                        <p class="text-sm text-starlight-300">
+                            Basic Ecology slows ecological decay. Research it before you open your
+                            heaviest extraction zones, because slowing decay afterwards is repairing a
+                            problem you could have avoided.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Crisis drills -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Crisis Drills
+                </h2>
+                <div class="bg-cosmic-800/50 rounded-lg p-6 border border-nebula-pink/20">
+                    <p class="text-starlight-300 mb-4">
+                        Random events are not random disasters to be survived. They are repeatable
+                        problems to be prepared for. Run these five drills once your colony has two
+                        cycles of reserves.
+                    </p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="text-left text-starlight-200 border-b border-cosmic-600">
+                                    <th class="py-2 px-3">Crisis</th>
+                                    <th class="py-2 px-3">First Response</th>
+                                    <th class="py-2 px-3">Prevention</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-starlight-300">
+                                <tr class="border-b border-cosmic-700/50">
+                                    <td class="py-2 px-3">Resource shortage</td>
+                                    <td class="py-2 px-3">Fix power first, then oxygen, then food</td>
+                                    <td class="py-2 px-3">Maintain the 1.1 to 1.5 production band</td>
+                                </tr>
+                                <tr class="border-b border-cosmic-700/50">
+                                    <td class="py-2 px-3">Disease outbreak</td>
+                                    <td class="py-2 px-3">Quarantine zones and boost comfort</td>
+                                    <td class="py-2 px-3">Good housing and food variety</td>
+                                </tr>
+                                <tr class="border-b border-cosmic-700/50">
+                                    <td class="py-2 px-3">Alien raid</td>
+                                    <td class="py-2 px-3">Shut off trade, rebuild storage</td>
+                                    <td class="py-2 px-3">Keep relations positive</td>
+                                </tr>
+                                <tr class="border-b border-cosmic-700/50">
+                                    <td class="py-2 px-3">Kewa health crash</td>
+                                    <td class="py-2 px-3">Stop extraction, stack Ecodomes</td>
+                                    <td class="py-2 px-3">Keep the undeveloped reserve</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-3">Cosmic storm</td>
+                                    <td class="py-2 px-3">Protect power and the lab</td>
+                                    <td class="py-2 px-3">Redundant power and two research sources</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="flex justify-between items-center pt-8 border-t border-cosmic-600">
+                <a href="tips.html" class="px-4 py-2 bg-cosmic-700 hover:bg-cosmic-600 rounded-lg transition-colors">
+                    ← Strategy Tips
+                </a>
+                <a href="beginner-guide.html" class="px-4 py-2 bg-nebula-purple/20 hover:bg-nebula-purple/30 text-nebula-purple rounded-lg transition-colors">
+                    Beginner Guide →
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Adsterra Ads -->
+    <script async="async" data-cfasync="false" src="https://bauval.org/21/4b4681af68a0d121311187dab61e6022"></script>
+    <div id="container-4b4681af68a0d121311187dab61e6022"></div>
+
+    <script data-cfasync="false" src="https://bauval.org/14/2277d65cec80439a2cb28f1bbdb7256b"></script>
+
+    <script>
+      atOptions = {
+        'key' : '8e1afacee0bd34a44dbf66aa1e067405',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://bauval.org/22/8e1afacee0bd34a44dbf66aa1e067405"></script>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-cosmic-900 border-t border-cosmic-700 py-8 px-4 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-starlight-300 text-sm mb-2">Beyond These Stars Wiki</p>
+            <p class="text-starlight-300/50 text-xs">This is a fan-made wiki. Game by Balancing Monkey Games.</p>
+        </div>
+
+    <!-- Related Articles -->
+    <section class="max-w-6xl mx-auto py-8 px-4 border-t border-cosmic-700">
+        <h3 class="text-2xl font-bold mb-4 text-nebula-blue">You Might Also Like</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+        <a href="beginner-guide.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Beginner Guide - Beyond These Stars Wiki</span>
+        </a>
+        <a href="tips.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Strategy Tips - Beyond These Stars Wiki</span>
+        </a>
+        <a href="buildings.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Buildings Guide - Beyond These Stars Wiki</span>
+        </a>
+        <a href="walkthrough.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Walkthrough - Beyond These Stars Wiki</span>
+        </a>
+        </div>
+    </section>
+</footer>
+
+    <script>
+        // Generate star background
+        const starsContainer = document.getElementById('stars');
+        const starCount = 100;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'absolute star rounded-full bg-white';
+            const size = Math.random() * 2 + 1;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>

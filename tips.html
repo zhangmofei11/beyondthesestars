@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategy Tips - Beyond These Stars Wiki</title>
+    <title>Beyond These Stars Tips & Tricks - Colony Survival Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,8 +40,8 @@
         gtag('js', new Date());
         gtag('config', 'G-M88HSJ20X9');
     </script>
-    <meta name="description" content="Get more from Beyond These Stars with practical tips on resource balancing, worker placement, research priority, and surviving the harder later cycles.">
-    <meta name="keywords" content="Beyond These Stars tips, space colony tips, resource management guide, worker placement, research priority, survival strategies">
+    <meta name="description" content="Beyond These Stars tips and tricks: resource priority, early build order, ecology restoration, crew morale, research priority, trade routes, and mistakes.">
+    <meta name="keywords" content="Beyond These Stars tips, Beyond These Stars tips and tricks, colony survival guide, resource priority, early build order, ecology restoration, crew morale, research priority, alien trade routes">
     <style>
         @keyframes twinkle {
             0%, 100% { opacity: 1; }
@@ -54,7 +54,7 @@
     </style>
 
     <script type="application/ld+json">
-{
+    {
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -68,8 +68,8 @@
           "@type": "WebPage",
           "@id": "https://beyondthesestars.world/tips.html#webpage",
           "url": "https://beyondthesestars.world/tips.html",
-          "name": "Strategy Tips - Beyond These Stars Wiki",
-          "description": "Get more from Beyond These Stars with practical tips on resource balancing, worker placement, research priority, and surviving the harder later cycles.",
+          "name": "Beyond These Stars Tips & Tricks - Colony Survival Guide",
+          "description": "Beyond These Stars tips and tricks: resource priority, early build order, ecology restoration, crew morale, research queues, alien trade routes, and common mistakes.",
           "isPartOf": {
             "@id": "https://beyondthesestars.world/#website"
           },
@@ -91,7 +91,7 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Strategy Tips - Beyond These Stars Wiki"
+              "name": "Beyond These Stars Tips & Tricks - Colony Survival Guide"
             }
           ]
         }
@@ -117,6 +117,8 @@
                     <a href="walkthrough.html" class="hover:text-nebula-blue transition-colors">Walkthrough</a>
                     <a href="tips.html" class="text-nebula-purple transition-colors font-semibold">Tips</a>
                     <a href="buildings.html" class="hover:text-nebula-blue transition-colors">Buildings</a>
+                    <a href="pro-tips.html" class="hover:text-nebula-blue transition-colors">Pro Tips</a>
+                    <a href="beginner-guide.html" class="hover:text-nebula-blue transition-colors">Beginner Guide</a>
                 </div>
             </div>
         </div>
@@ -126,9 +128,9 @@
     <header class="relative z-10 py-12 px-4">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-starlight-100 to-nebula-purple bg-clip-text text-transparent">
-                Strategy Tips
+                Beyond These Stars Tips & Tricks
             </h1>
-            <p class="text-starlight-200 text-lg">Master resource management and colony optimization strategies.</p>
+            <p class="text-starlight-200 text-lg">Practical strategies for balancing resources, protecting Kewa, and keeping your colonists alive.</p>
         </div>
     </header>
 
@@ -138,29 +140,63 @@
             <!-- Resource Management Section -->
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
-                    Resource Management
+                    Resource Management Tips
                 </h2>
                 <div class="space-y-6">
                     <div class="bg-cosmic-800/50 backdrop-blur-sm rounded-xl p-6 border border-nebula-blue/20">
-                        <h3 class="text-xl font-semibold mb-3 text-nebula-blue">The 3-Golden Rules</h3>
-                        <div class="grid md:grid-cols-3 gap-4">
-                            <div class="bg-cosmic-700/50 rounded-lg p-4">
-                                <h4 class="font-semibold text-starlight-100 mb-2">1. Balance Extraction</h4>
-                                <p class="text-starlight-300 text-sm">Never extract one resource faster than you can use or store it. Over-extraction leads to waste and ecosystem damage.</p>
-                            </div>
-                            <div class="bg-cosmic-700/50 rounded-lg p-4">
-                                <h4 class="font-semibold text-starlight-100 mb-2">2. Build Storage First</h4>
-                                <p class="text-starlight-300 text-sm">Before increasing production, always expand storage capacity. Overflowing resources are lost resources.</p>
-                            </div>
-                            <div class="bg-cosmic-700/50 rounded-lg p-4">
-                                <h4 class="font-semibold text-starlight-100 mb-2">3. Monitor Ratios</h4>
-                                <p class="text-starlight-300 text-sm">Keep production/consumption ratios between 1.1 and 1.5. Below 1.1 risks shortages, above 1.5 wastes capacity.</p>
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-nebula-blue">The 3 Golden Rules</h3>
+                        <ul class="space-y-2 text-starlight-300 text-sm list-disc list-inside">
+                            <li><strong class="text-starlight-100">Balance extraction.</strong> Never extract faster than you can store it.</li>
+                            <li><strong class="text-starlight-100">Build storage first.</strong> Expand storage before raising production.</li>
+                            <li><strong class="text-starlight-100">Monitor ratios.</strong> Keep production/consumption between 1.1 and 1.5.</li>
+                        </ul>
                     </div>
 
                     <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-purple/20">
-                        <h3 class="font-semibold text-nebula-purple mb-3">Essential Resource Ratios</h3>
+                        <h3 class="font-semibold text-nebula-purple mb-3">Resource Priority Order</h3>
+                        <p class="text-sm text-starlight-300 mb-4">When you can only fix one shortage per cycle, work down this list.</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="text-left text-starlight-200 border-b border-cosmic-600">
+                                        <th class="py-2 px-3">Resource</th>
+                                        <th class="py-2 px-3">Prioritise Over</th>
+                                        <th class="py-2 px-3">Why It Comes First</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-starlight-300">
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">Power</td>
+                                        <td class="py-2 px-3">All production</td>
+                                        <td class="py-2 px-3">A blackout stops farms, labs and extractors</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">Oxygen</td>
+                                        <td class="py-2 px-3">Food</td>
+                                        <td class="py-2 px-3">Low oxygen caps population first</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">Biomass</td>
+                                        <td class="py-2 px-3">Nutrients</td>
+                                        <td class="py-2 px-3">Feedstock for every nutrient process</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">Nutrients</td>
+                                        <td class="py-2 px-3">Food output</td>
+                                        <td class="py-2 px-3">Starved farms underproduce food</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-3">Housing</td>
+                                        <td class="py-2 px-3">Population</td>
+                                        <td class="py-2 px-3">Colonists without beds stall growth</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-blue/20">
+                        <h3 class="font-semibold text-nebula-blue mb-3">Essential Resource Ratios</h3>
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm">
                                 <thead>
@@ -184,12 +220,12 @@
                                     <tr class="border-b border-cosmic-700/50">
                                         <td class="py-2 px-3">Minerals</td>
                                         <td class="py-2 px-3">1.2</td>
-                                        <td class="py-2 px-3">&lt; 1.0 (construction delay)</td>
+                                        <td class="py-2 px-3">&lt; 1.0 (build delay)</td>
                                     </tr>
                                     <tr>
                                         <td class="py-2 px-3">Energy Cells</td>
                                         <td class="py-2 px-3">1.4</td>
-                                        <td class="py-2 px-3">&lt; 1.0 (tech research paused)</td>
+                                        <td class="py-2 px-3">&lt; 1.0 (research paused)</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -198,43 +234,68 @@
                 </div>
             </section>
 
-            <!-- Supply Chain Section -->
+            <!-- Build Order Section -->
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
-                    Supply Chain Optimization
+                    Early Game Build Order
                 </h2>
                 <div class="space-y-4 text-starlight-200">
-                    <p>Efficient supply chains are the backbone of a thriving colony. Here's how to optimize them.</p>
+                    <p>Placement order matters more than placement speed in the first cycles. Follow this sequence and your colony stays solvent while it grows.</p>
 
-                    <div class="bg-gradient-to-r from-cosmic-700/50 to-cosmic-800/50 rounded-xl p-6 border border-nebula-blue/20">
-                        <h3 class="text-lg font-semibold mb-4 text-nebula-blue">Chain Building Layout</h3>
-                        <div class="bg-cosmic-900/50 rounded-lg p-4 font-mono text-sm">
-                            <p class="text-nebula-purple">[Raw Materials] → [Processing] → [Storage] → [Distribution]</p>
-                            <p class="text-starlight-300 mt-2">Extractor → Refinery → Warehouse → Consumer Buildings</p>
+                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-blue/20">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="text-left text-starlight-200 border-b border-cosmic-600">
+                                        <th class="py-2 px-3">Order</th>
+                                        <th class="py-2 px-3">Build</th>
+                                        <th class="py-2 px-3">Reason</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-starlight-300">
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">1</td>
+                                        <td class="py-2 px-3">Solar Array</td>
+                                        <td class="py-2 px-3">Everything next needs power</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">2</td>
+                                        <td class="py-2 px-3">Habitat Dome</td>
+                                        <td class="py-2 px-3">Beds for your colonists</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">3</td>
+                                        <td class="py-2 px-3">Minerals Extractor</td>
+                                        <td class="py-2 px-3">Material for the next buildings</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">4</td>
+                                        <td class="py-2 px-3">Hydroponic Farm</td>
+                                        <td class="py-2 px-3">Food buffer before a famine</td>
+                                    </tr>
+                                    <tr class="border-b border-cosmic-700/50">
+                                        <td class="py-2 px-3">5</td>
+                                        <td class="py-2 px-3">Warehouse</td>
+                                        <td class="py-2 px-3">Room to overproduce</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-3">6</td>
+                                        <td class="py-2 px-3">Research Lab</td>
+                                        <td class="py-2 px-3">Efficiency techs cut later costs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
-                            <h4 class="font-semibold text-starlight-100 mb-2">Do's</h4>
-                            <ul class="text-sm space-y-1 text-starlight-300 list-disc list-inside">
-                                <li>Place processors adjacent to extractors</li>
-                                <li>Centralize storage for each resource type</li>
-                                <li>Use transport drones for long distances</li>
-                                <li>Balance production across all resources</li>
-                                <li>Create backup supply routes</li>
-                            </ul>
-                        </div>
-                        <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
-                            <h4 class="font-semibold text-starlight-100 mb-2">Don'ts</h4>
-                            <ul class="text-sm space-y-1 text-starlight-300 list-disc list-inside">
-                                <li>Don't chain more than 3 buildings without storage</li>
-                                <li>Avoid crossing supply routes</li>
-                                <li>Don't place extractors near residential areas</li>
-                                <li>Don't rely on single-source production</li>
-                                <li>Avoid overbuilding chains early game</li>
-                            </ul>
-                        </div>
+                    <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
+                        <h3 class="font-semibold text-starlight-100 mb-2">Do's and Don'ts</h3>
+                        <ul class="text-sm space-y-1 text-starlight-300 list-disc list-inside">
+                            <li>Place processors next to their extractors, storage per resource type</li>
+                            <li>Never chain more than three buildings without storage</li>
+                            <li>Keep extractors away from residential areas</li>
+                            <li>Build luxury structures only after farms and labs</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -245,39 +306,43 @@
                     Ecology Management
                 </h2>
                 <div class="space-y-4 text-starlight-200">
-                    <p>Kewa's health is directly tied to your colony's sustainability. Learn to work with the ecosystem, not against it.</p>
+                    <p>Kewa's health is tied directly to colony sustainability. Treat restoring ecology as production, not decoration.</p>
 
-                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-green-500/30">
-                        <h3 class="font-semibold text-green-400 mb-3">Ecology Health Indicators</h3>
-                        <div class="grid md:grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <p class="text-starlight-100 mb-1">Healthy Signs:</p>
-                                <ul class="space-y-1 text-starlight-300 list-disc list-inside">
-                                    <li>Lush green patches across Kewa's back</li>
-                                    <li>Steady health meter (above 80%)</li>
-                                    <li>Normal movement patterns</li>
-                                    <li>Abundant local resources</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <p class="text-starlight-100 mb-1">Warning Signs:</p>
-                                <ul class="space-y-1 text-starlight-300 list-disc list-inside">
-                                    <li>Brown or yellow patches</li>
-                                    <li>Health meter declining</li>
-                                    <li>Reduced resource yields</li>
-                                    <li>Strange whale sounds</li>
-                                </ul>
-                            </div>
-                        </div>
+
+                    <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-purple/20">
+                        <h3 class="font-semibold text-nebula-purple mb-3">Restore Ecology Management</h3>
+                        <ul class="space-y-2 text-starlight-300">
+                            <li><strong>Repair damaged ground first:</strong> send Ecodomes to scarred tiles before opening new extraction sites</li>
+                            <li><strong>Stack healers:</strong> multiple Ecodomes in one region restore faster than one spread thin</li>
+                            <li><strong>Leave reserves:</strong> keep a quarter of Kewa's surface undeveloped as a buffer</li>
+                            <li><strong>Match yield to recovery:</strong> cut extraction on tiles that regenerate slowly</li>
+                            <li><strong>Watch biodiversity:</strong> richer areas give better resource quality nearby</li>
+                        </ul>
                     </div>
 
-                    <div class="bg-cosmic-800/50 rounded-lg p-4 border border-nebula-purple/20">
-                        <h3 class="font-semibold text-nebula-purple mb-3">Eco-Balance Tips</h3>
+                    <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
+                        <h3 class="font-semibold text-starlight-100 mb-2">Healthy or Troubled?</h3>
+                        <p class="text-sm text-starlight-300">Healthy Kewa shows lush green patches and a health meter above 80%. Trouble shows as brown patches spreading, a falling health meter, and reduced yields from tiles you already harvested.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Crew Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Crew Morale and Food Rations
+                </h2>
+                <div class="space-y-4 text-starlight-200">
+                    <p>Colonists work harder when morale holds. Food and oxygen are the levers, and rationing is a tool rather than a punishment.</p>
+
+                    <div class="bg-cosmic-800/50 rounded-lg p-4 border border-nebula-blue/20">
+                        <h3 class="font-semibold text-nebula-blue mb-3">Keeping the Crew Happy</h3>
                         <ul class="space-y-2 text-starlight-300">
-                            <li><strong>Plant Ecodomes:</strong> These restore local ecosystem health over time</li>
-                            <li><strong>Limit Extractions:</strong> Keep extraction rates below ecosystem regeneration</li>
-                            <li><strong>Create Buffers:</strong> Maintain undeveloped zones as ecological reserves</li>
-                            <li><strong>Monitor Biodiversity:</strong> Higher biodiversity means better resource quality</li>
+                            <li><strong>Rations in reserve:</strong> keep food production near 1.3x consumption</li>
+                            <li><strong>Cut gently:</strong> shave small amounts colony-wide, not one district hard</li>
+                            <li><strong>Comfort buildings:</strong> amenities raise morale for everyone in range</li>
+                            <li><strong>Watch oxygen:</strong> morale falls sharply when air quality drops</li>
+                            <li><strong>Recreation zones:</strong> place them between industrial and housing</li>
                         </ul>
                     </div>
                 </div>
@@ -286,10 +351,10 @@
             <!-- Trade Section -->
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
-                    Interstellar Trade
+                    Trade Routes and Alien Negotiation
                 </h2>
                 <div class="space-y-4 text-starlight-200">
-                    <p>Trading with alien civilizations can provide crucial resources and technologies, but requires careful management.</p>
+                    <p>Alien trade can supply what your ecosystem cannot, but only if you negotiate deliberately.</p>
 
                     <div class="bg-gradient-to-r from-nebula-pink/20 to-cosmic-700/50 rounded-xl p-6 border border-nebula-pink/30">
                         <h3 class="text-lg font-semibold mb-4 text-nebula-pink">Alien Species Quick Reference</h3>
@@ -310,13 +375,14 @@
                     </div>
 
                     <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-blue/20">
-                        <h3 class="font-semibold text-nebula-blue mb-3">Trade Strategy</h3>
+                        <h3 class="font-semibold text-nebula-blue mb-3">Negotiation Tips</h3>
                         <ol class="list-decimal list-inside space-y-2 text-starlight-300">
-                            <li>Build a Trade Hub to enable alien commerce</li>
-                            <li>Start with simple trades to build relationships</li>
-                            <li>Focus on trades that use excess resources</li>
-                            <li>Unlock better trade routes as reputation grows</li>
-                            <li>Always maintain internal supply before exporting</li>
+                            <li>Build a Trade Hub before your first offer so routes stay available</li>
+                            <li>Learn each species' preferred goods and deal in those</li>
+                            <li>Trade surplus goods, never your last buffer of food or power</li>
+                            <li>Spread trades across partners so one lost route cannot stall you</li>
+                            <li>Improve relations steadily; hostile aliens can raid a colony</li>
+                            <li>Expect routes to break during cosmic events and keep reserves</li>
                         </ol>
                     </div>
                 </div>
@@ -325,38 +391,50 @@
             <!-- Tech Tree Section -->
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
-                    Technology Research
+                    Technology Research Priority
                 </h2>
                 <div class="space-y-4 text-starlight-200">
-                    <p>The tech tree unlocks advanced buildings, improved efficiency, and the secrets of the universe.</p>
+                    <p>The tech tree unlocks advanced buildings, better efficiency, and the secrets of the universe. Research in this order:</p>
+
 
                     <div class="bg-cosmic-800/50 rounded-lg p-4 border border-starlight-300/20">
-                        <h3 class="font-semibold text-starlight-300 mb-3">Recommended Research Order</h3>
-                        <div class="space-y-2 text-sm">
-                            <div class="flex items-center gap-3">
-                                <span class="bg-nebula-blue/30 px-2 py-1 rounded text-xs">Tier 1</span>
-                                <span>Resource Efficiency → Supply Chain Optimization → Basic Ecology</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="bg-nebula-purple/30 px-2 py-1 rounded text-xs">Tier 2</span>
-                                <span>Advanced Power → Storage Expansion → Trade Networks</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="bg-nebula-pink/30 px-2 py-1 rounded text-xs">Tier 3</span>
-                                <span>Exotic Materials → Deep Space Exploration → Kewa Communication</span>
-                            </div>
-                        </div>
+                        <ol class="list-decimal list-inside space-y-2 text-starlight-300">
+                            <li><strong>Resource Efficiency</strong> - every later building costs less to run</li>
+                            <li><strong>Supply Chain Optimisation</strong> - boosts yield across all production</li>
+                            <li><strong>Basic Ecology</strong> - slows ecological decay</li>
+                            <li><strong>Advanced Power</strong> - unlocks reactors for large colonies</li>
+                            <li><strong>Storage Expansion</strong> - fewer overflow losses</li>
+                            <li><strong>Trade Networks</strong> - better prices and more routes</li>
+                            <li><strong>Deep Space Exploration</strong> - required for the final secrets</li>
+                        </ol>
                     </div>
 
                     <div class="bg-cosmic-700/50 rounded-lg p-4 border border-nebula-purple/20">
                         <h3 class="font-semibold text-nebula-purple mb-2">Research Tips</h3>
                         <ul class="text-sm space-y-1 text-starlight-300 list-disc list-inside">
-                            <li>Always have at least one research lab running</li>
-                            <li>Prioritize efficiency upgrades first</li>
-                            <li>Balance between economic and defensive techs</li>
-                            <li>Late-game secrets require multiple high-tier research</li>
+                            <li>Always have at least one lab researching</li>
+                            <li>Never idle a lab while energy cells sit in storage</li>
+                            <li>Split labs across two tiers only once your power surplus is stable</li>
+                            <li>Save before starting a long project</li>
                         </ul>
                     </div>
+                </div>
+            </section>
+
+            <!-- Common Mistakes Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-starlight-100 border-b border-cosmic-600 pb-2">
+                    Common Mistakes to Avoid
+                </h2>
+                <div class="bg-cosmic-800/50 rounded-lg p-4 border border-nebula-pink/20">
+                    <ul class="space-y-2 text-starlight-300">
+                        <li><strong>Expanding before stabilising:</strong> adding buildings to a colony with a deficit just scales the deficit</li>
+                        <li><strong>Ignoring oxygen:</strong> crews fail before food runs out when air quality slips</li>
+                        <li><strong>Strip-mining Kewa:</strong> a colony on a dying whale inherits the collapse</li>
+                        <li><strong>One-route dependency:</strong> a single route or power plant is a single point of failure</li>
+                        <li><strong>Over-researching luxury:</strong> comfort tech before efficiency tech is a slow spiral</li>
+                        <li><strong>Empty storage:</strong> production above capacity wastes every overproduced cycle</li>
+                    </ul>
                 </div>
             </section>
 
@@ -366,11 +444,11 @@
                     Crisis Management
                 </h2>
                 <div class="space-y-4 text-starlight-200">
-                    <p>Random events and crises will test your colony. Be prepared with these strategies.</p>
+                    <p>Random events will test your colony. Prepare with these strategies.</p>
 
                     <div class="grid md:grid-cols-2 gap-4">
-                        <div class="bg-cosmic-800/50 rounded-lg p-4 border border-red-500/30">
-                            <h3 class="font-semibold text-red-400 mb-2">Common Crises</h3>
+                        <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
+                            <h3 class="font-semibold text-starlight-100 mb-2">Common Crises</h3>
                             <ul class="text-sm space-y-1 text-starlight-300 list-disc list-inside">
                                 <li>Resource shortage</li>
                                 <li>Disease outbreak</li>
@@ -379,14 +457,14 @@
                                 <li>Cosmic storm damage</li>
                             </ul>
                         </div>
-                        <div class="bg-cosmic-800/50 rounded-lg p-4 border border-green-500/30">
-                            <h3 class="font-semibold text-green-400 mb-2">Prevention Tips</h3>
+                        <div class="bg-cosmic-800/50 rounded-lg p-4 border border-cosmic-600">
+                            <h3 class="font-semibold text-starlight-100 mb-2">Prevention Tips</h3>
                             <ul class="text-sm space-y-1 text-starlight-300 list-disc list-inside">
-                                <li>Always maintain 2x emergency reserves</li>
-                                <li>Build redundant systems</li>
-                                <li>Keep relations positive with aliens</li>
-                                <li>Monitor Kewa health daily</li>
-                                <li>Save game before cycles 50, 100, 200</li>
+                                <li>Keep two cycles of emergency reserves</li>
+                                <li>Build redundant power and food</li>
+                                <li>Keep alien relations positive</li>
+                                <li>Check Kewa's health every cycle</li>
+                                <li>Save before major decisions</li>
                             </ul>
                         </div>
                     </div>
@@ -428,21 +506,27 @@
             <p class="text-starlight-300 text-sm mb-2">Beyond These Stars Wiki</p>
             <p class="text-starlight-300/50 text-xs">This is a fan-made wiki. Game by Balancing Monkey Games.</p>
         </div>
-    
+
     <!-- Related Articles -->
-    <section class="max-w-4xl mx-auto py-8 px-4 border-t border-yellow-900">
-        <h3 class="text-xl font-bold mb-4 text-white">You Might Also Like</h3>
+    <section class="max-w-6xl mx-auto py-8 px-4 border-t border-cosmic-700">
+        <h3 class="text-2xl font-bold mb-4 text-nebula-blue">You Might Also Like</h3>
         <div class="grid md:grid-cols-3 gap-4">
-        <a href="buildings.html" class="block p-4 bg-yellow-900/30 border-yellow-900 rounded hover:bg-yellow-800/30 transition">
-            <span class="font-semibold text-gray-300">→ Buildings Guide - Beyond These Stars Wiki</span>
+        <a href="index.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Beyond These Stars - Game Wiki</span>
         </a>
-        <a href="index.html" class="block p-4 bg-yellow-900/30 border-yellow-900 rounded hover:bg-yellow-800/30 transition">
-            <span class="font-semibold text-gray-300">→ Beyond These Stars - Game Wiki</span>
+        <a href="buildings.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Buildings Guide - Beyond These Stars Wiki</span>
         </a>
-        <a href="walkthrough.html" class="block p-4 bg-yellow-900/30 border-yellow-900 rounded hover:bg-yellow-800/30 transition">
-            <span class="font-semibold text-gray-300">→ Walkthrough - Beyond These Stars Wiki</span>
+        <a href="walkthrough.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Walkthrough - Beyond These Stars Wiki</span>
         </a>
-        </div>
+                <a href="pro-tips.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Pro Tips - Beyond These Stars Wiki</span>
+        </a>
+        <a href="beginner-guide.html" class="block p-4 bg-cosmic-800/50 border border-cosmic-600 rounded-lg hover:bg-cosmic-700/50 transition">
+            <span class="font-semibold text-starlight-200">→ Beginner Guide - Beyond These Stars Wiki</span>
+        </a>
+</div>
     </section>
 </footer>
 
@@ -458,6 +542,8 @@
             star.style.height = size + 'px';
             star.style.left = Math.random() * 100 + '%';
             star.style.top = Math.random() * 100 + '%';
+            star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            star.style.animationDelay = Math.random() * 2 + 's';
             starsContainer.appendChild(star);
         }
     </script>
